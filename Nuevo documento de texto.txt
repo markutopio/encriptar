@@ -58,6 +58,9 @@ def main():
 
     print(cifrar(c, n))
 
+    libreria[input("tipo de mensaje")]=c
+    libreria["desplazamiento"]= n
+    historial.append(libreria)
 def main2():
     q = str(input('cadena a descifrar: ')).lower()
 
@@ -70,14 +73,7 @@ def main2():
 def info():
     print("pronto info")
 
-def historia():
-    libreria["msg"] = ""
-    libreria["clave"] = float
-    historial.append(libreria)
-    return print(libreria)
 
-def borrar_mensaje():
-    historial.pop(libreria)
 
 
 ans=True
@@ -93,14 +89,13 @@ while ans:
     if ans=="1":
         main()
     elif ans=="2":
-        borrar_mensaje()
+        historial.pop()
     elif ans=="3":
         main2()
     elif ans=="4":
-        historia()
+        print(historial)
     elif ans=="5":
         print("Adios")
         break
     elif ans!="":
         print(" eso no es valido, intentalo de nuevo")
-
